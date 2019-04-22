@@ -9,14 +9,17 @@ section.levelUpContent {
 
 .oneTopOrange {
     background: #eb5634;
-    height: 500px;
     color: white;
     font-size: 1.52em;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    align-content: center;    
+    align-content: center; 
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 7; 
 }
 
 div.mainBackground {
@@ -34,8 +37,15 @@ div.mainBackground {
 .twoTopLightBlue {
     height: 100%;
     width: 100%;
-    background: red;
+    /*background: url(O6JTUC0.jpg);*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
     grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 8;
+    background-color: red;
 }
 app-top{
 	position: fixed;
@@ -47,6 +57,8 @@ app-top{
 img.seeThrough {
     grid-column-start: 1;
     grid-column-end: 4;
+    position: relative;
+    top: 1px;
 }
 
 h3 {
@@ -58,4 +70,37 @@ h3 {
     background: white;
     padding: 0;
     margin: 0;
+    padding: 0 0 20px 0;
+}
+
+.imagesHeroes {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+    grid-template-rows: repeat(9, 100px);
+}
+
+
+
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
