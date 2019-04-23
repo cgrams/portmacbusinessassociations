@@ -16,12 +16,17 @@
 
 
       <div class="mainBackground"></div>
+ 
 
+ 
+
+ 
     	<app-top></app-top>
       <section class="levelUpContent">
         <img class="seeThrough" src="../assets/moreThan.svg" width="100%">
         <h3>Free business networking community in Port Macquarie</h3>
         <div class="imagesHeroes">
+        <div class="newSectionFlyIn" [@changeDivSize]=currentState></div>          
           <div class="oneTopOrange">
             <h4 class="orangeTitle">
               FOCUS ON <br/>
@@ -29,7 +34,8 @@
               BUSINESS RESULTS  <br/>
               FOR OUR MEMBERS            
             </h4>
-            <button class="organgeAboutButton" (click)="onClickMe()">
+
+            <button class="organgeAboutButton" id="curser2" (click)="changeState()">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg>
             </button>
           </div>
@@ -60,6 +66,8 @@
             </svg>            
           </div>
         </div>
+
+
       </section>
 
 
