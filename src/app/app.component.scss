@@ -1,14 +1,86 @@
 section.levelUpContent {
     display: grid;
     grid-template-columns: 33% 33% 34%;
-
     position: relative;
     z-index: 2;
 }
+.threeTopRight {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-rows: 100px 100px 400px;
+    grid-template-columns: 50% 50%;
+}
+.whiteTop {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background: white;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.underPicTop {
+background: #44A08D;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+    grid-column-start: 2;
+    grid-row-start: 6;
+}
+span.smallArrowMiddle {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    top: 1px;
+    right: 25%;    
+}
+span.smallArrowMiddle svg {
+    width: 50px;
+    height: 25px;
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1);
+}
+.greyTop{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background: #D3CCE3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border-right: 5px solid white;
+}
+.fourGreeny {
+    background: #0cebeb;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #29ffc6, #20e3b2, #0cebeb);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #29ffc6, #20e3b2, #0cebeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    border-top: 5px solid white;
+}
+.smallArrowGreenSHow {
+    z-index: 4;
+    grid-column-start: 3;
+    grid-row-start: 7;
+    height: 60px;
+    width: 60px;
+    margin: 0 auto;
+    background-color: white;    
+}
 
 .oneTopOrange {
-    background: #eb5634;
+    background: #ff9966;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
     font-size: 1.52em;
     padding: 20px;
@@ -19,11 +91,34 @@ section.levelUpContent {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
-    grid-row-end: 7; 
+    grid-row-end: 5; 
+    border-right: 5px solid white;
 }
-
+.underOrange {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 7;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 100px;
+}
+.underOrangeRight {
+    background: #D3CCE3;
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    border-top: 5px solid white;
+    border-right: 5px solid white;
+    border-left: 5px solid white; 
+}
+.underOrangeLeftWhite {
+    background: white;
+}
 div.mainBackground {
-    background: url('../assets/portBackground.webp');
+    background: url('../assets/port3.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -37,15 +132,15 @@ div.mainBackground {
 .twoTopLightBlue {
     height: 100%;
     width: 100%;
-    /*background: url(O6JTUC0.jpg);*/
+    background: url('../assets/handShake.jpg');
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end: 8;
-    background-color: red;
+    grid-row-end: 6;
+
 }
 app-top{
 	position: fixed;
@@ -70,15 +165,20 @@ h3 {
     background: white;
     padding: 0;
     margin: 0;
-    padding: 0 0 20px 0;
+    padding: 0 0 120px 0;
 }
-
+.smallGreenArrow {
+    background: white;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 7;
+}
 .imagesHeroes {
     grid-column-start: 1;
     grid-column-end: 4;
     display: grid;
     grid-template-columns: 33% 33% 34%;
-    grid-template-rows: repeat(9, 100px);
+    grid-template-rows: repeat(10, 100px);
 }
 
 
