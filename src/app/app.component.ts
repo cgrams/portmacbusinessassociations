@@ -12,4 +12,11 @@ export class AppComponent {
   events: string[] = [];
   opened: boolean;
 
+
+clickMessage = '';
+
+  onClickMe() {
+    this.clickMessage = 'You are my hero!';
+    alert();
+  }
 }

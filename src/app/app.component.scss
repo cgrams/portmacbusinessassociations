@@ -76,6 +76,20 @@ span.smallArrowMiddle svg {
     margin: 0 auto;
     background-color: white;    
 }
+.organgeAboutButton{
+    border:none;
+    background-color: #f0f8ff00;
+    padding: 0;
+    margin:0;
+}
+
+.organgeAboutButton svg{
+    fill:white;
+    cursor: pointer;
+}
+.organgeAboutButton svg:hover{
+    fill:red;
+}
 
 .oneTopOrange {
     background: #ff9966;  /* fallback for old browsers */
@@ -93,6 +107,7 @@ span.smallArrowMiddle svg {
     grid-row-start: 1;
     grid-row-end: 5; 
     border-right: 5px solid white;
+    flex-direction: column;
 }
 .underOrange {
     grid-column-start: 1;
