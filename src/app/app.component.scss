@@ -20,13 +20,24 @@ section.levelUpContent {
     grid-row-end: 2;
 }
 .underPicTop {
-background: #44A08D;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: #44A08D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     grid-column-start: 2;
     grid-row-start: 6;
 }
+.handShakeButton {
+    grid-column-start: 4;
+    grid-column-end: 8;
+    text-align: center;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row-start: 6;
+    border: 1px solid black;
+}
+
 span.smallArrowMiddle {
     padding: 0;
     margin: 0;
@@ -37,7 +48,8 @@ span.smallArrowMiddle {
     align-items: flex-end;
     justify-content: center;
     top: 1px;
-    right: 25%;    
+    grid-row-start: 10;
+    grid-column-start: 3;  
 }
 span.smallArrowMiddle svg {
     width: 50px;
@@ -57,6 +69,7 @@ span.smallArrowMiddle svg {
     grid-row-start: 2;
     grid-row-end: 3;
     border-right: 5px solid white;
+    border-left: 5px solid white;    
 }
 .fourGreeny {
     background: #0cebeb;  /* fallback for old browsers */
@@ -67,6 +80,7 @@ span.smallArrowMiddle svg {
     grid-row-start: 3;
     grid-row-end: 3;
     border-top: 5px solid white;
+    border-left: 5px solid white;    
 }
 .smallArrowGreenSHow {
     z-index: 4;
@@ -92,9 +106,16 @@ button#curser2 {
 .organgeAboutButton svg{
     fill:white;
     cursor: pointer;
+    animation-duration: 300ms;
+
 }
 .organgeAboutButton svg:hover{
     fill:red;
+}
+
+.organgeAboutButton:focus {
+    outline: none ;
+ 
 }
 
 .oneTopOrange {
@@ -114,6 +135,7 @@ button#curser2 {
     grid-row-end: 5; 
     border-right: 5px solid white;
     flex-direction: column;
+    z-index: 6;
 }
 .underOrange {
     grid-column-start: 1;
@@ -123,6 +145,7 @@ button#curser2 {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 100px 100px;
+    z-index: 6;
 }
 .underOrangeRight {
     background: #D3CCE3;
@@ -133,11 +156,13 @@ button#curser2 {
     grid-column-start: 2;
     border-top: 5px solid white;
     border-right: 5px solid white;
-    border-left: 5px solid white; 
+    border-left: 5px solid white;
+    z-index: 6; 
 }
 .underOrangeLeftWhite {
     background: white;
 }
+
 div.mainBackground {
     background: url('../assets/port3.jpg');
     background-position: center center;
@@ -161,7 +186,9 @@ div.mainBackground {
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 6;
-
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(10, 10%)
 }
 app-top{
 	position: fixed;

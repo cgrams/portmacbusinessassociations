@@ -9,36 +9,27 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   animations: [
 	  trigger('changeDivSize', [
 	    state('initial', style({
- 
-	      zIndex: '5',
-	      position: 'relative',
-    	  backgroundColor: 'red',
-    gridRowStart: '1',
-    gridRowEnd: '7',
-    gridColumnStart: '2',
-    gridColumnEnd: '4',
-    right: '2000px'
-
-
-
+		    zIndex: '5',
+		    position: 'relative',
+	    	backgroundColor: 'white',
+		    gridRowStart: '1',
+		    gridRowEnd: '7',
+		    gridColumnStart: '2',
+		    gridColumnEnd: '4',
+		    right: '2000px'
 	    })),
 	    state('final', style({
- 
-	      zIndex: '5',
-	      position: 'relative',
-    	  backgroundColor: '#f19764',
-    gridRowStart: '1',
-    gridRowEnd: '7',
-    gridColumnStart: '2',
-    gridColumnEnd: '4',
-    right: '0px'
-
-
-
-
+		    zIndex: '5',
+		    position: 'relative',
+	    	backgroundColor: '#f19764',
+		    gridRowStart: '1',
+		    gridRowEnd: '7',
+		    gridColumnStart: '2',
+		    gridColumnEnd: '4',
+		    right: '0px'
 	    })),
-	    transition('initial=>final', animate('1500ms')),
-	    transition('final=>initial', animate('1000ms'))
+	    transition('initial=>final', animate('500ms')),
+	    transition('final=>initial', animate('500ms'))
 	  ]),
   ]
 

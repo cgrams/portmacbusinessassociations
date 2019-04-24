@@ -12,12 +12,14 @@ import { TopComponent } from './top/top.component';
 import { FooterComponent } from './footer/footer.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { GoalsComponent } from './goals/goals.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopComponent,
-    FooterComponent
+    FooterComponent,
+    GoalsComponent
   ],
   imports: [
     BrowserModule,
