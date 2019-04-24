@@ -1,16 +1,21 @@
 svg#logo {
     max-width: 100px;
+    grid-column-start: 2;
+    height: 70px;   
 }
 h1 span {
     padding: 0 5px;
 }
 .titleSection {
     display: grid;
-    grid-template-columns: 10% 50%;
+    grid-template-columns: 27% 8% 40% 25%;
     background: white;
+    padding: 5px 0;
 }
 
 h1 {
     display: flex;
     align-items: center;
+    grid-column-start: 3;
+    font-size: 25px; 
 }

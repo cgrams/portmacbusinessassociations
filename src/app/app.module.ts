@@ -8,6 +8,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { FormsModule } from '@angular/forms';
 
+import { ScrollEventModule } from 'ngx-scroll-event';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopComponent } from './top/top.component';
@@ -31,6 +33,7 @@ import { GoalsComponent } from './goals/goals.component';
     MatCheckboxModule,
     MatSidenavModule,
     MatTooltipModule,
+    ScrollEventModule,
     FormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }) 
   ],
