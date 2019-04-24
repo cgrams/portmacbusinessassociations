@@ -36,7 +36,13 @@ section.levelUpContent {
     align-items: center;
     grid-row-start: 6;
     border: 1px solid black;
+    cursor: pointer;
 }
+.handShakeButton:hover{
+    background-color: black;
+    color: white;
+}
+
 
 span.smallArrowMiddle {
     padding: 0;
@@ -97,6 +103,7 @@ span.smallArrowMiddle svg {
     padding: 0;
     margin:0;
     cursor: pointer;
+
 }
 
 button#curser2 {
@@ -106,8 +113,7 @@ button#curser2 {
 .organgeAboutButton svg{
     fill:white;
     cursor: pointer;
-    animation-duration: 300ms;
-
+    transition: 0.3s;
 }
 .organgeAboutButton svg:hover{
     fill:red;
