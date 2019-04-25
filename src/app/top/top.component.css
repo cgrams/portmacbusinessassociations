@@ -8,7 +8,7 @@ h1 span {
 }
 .titleSection {
     display: grid;
-    grid-template-columns: 27% 8% 40% 25%;
+    grid-template-columns: 27% 8% 40% 10% 10% 5%;
     background: white;
     padding: 5px 0;
 }
@@ -18,4 +18,18 @@ h1 {
     align-items: center;
     grid-column-start: 3;
     font-size: 25px; 
+}
+
+.contact, .join {
+    display: flex;
+    align-items: center;
+}
+.join img, .joinText, .contact img{
+	cursor: pointer;
+}
+
+.contact h5 {
+    padding-bottom: 2%;
+    padding-left: 1%;
+    cursor: pointer;
 }

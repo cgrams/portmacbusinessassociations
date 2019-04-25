@@ -13,16 +13,12 @@ import { ScrollEvent } from 'ngx-scroll-event';
 	  trigger('changeHeader', [
 	    state('initialHeader', style({
 	      borderBottom: '0px solid black',
-	      fontSize: '20px',
-	      background: 'white'
 	    })),
 	    state('finalHeader', style({
 	      borderBottom: '1px solid black',
-	      fontSize: '18px',
-	      background: '#fffabf'
 	    })),
 	    transition('initialHeader=>finalHeader', animate('1500ms')),
-	    transition('finalHeader=>initialHeader', animate('1000ms'))
+	    transition('finalHeader=>initialHeader', animate('100ms'))
 	  ]),
 	]
 
@@ -32,9 +28,9 @@ export class TopComponent implements OnInit {
 
 currentStateHeader = 'initialHeader';
 
-changeStateHeader() {
-  this.currentStateHeader = this.currentStateHeader === 'initialHeader' ? 'finalHeader' : 'initialHeader';
-}
+	changeStateHeader() {
+	  this.currentStateHeader = this.currentStateHeader === 'initialHeader' ? 'finalHeader' : 'initialHeader';
+	}
 
 
 	public handleScroll(event: ScrollEvent) { 

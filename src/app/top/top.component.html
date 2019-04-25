@@ -1,6 +1,6 @@
 
-<div class="titleSection" detect-scroll (onScroll)="handleScroll($event)" [bottomOffset]="200" [topOffset]="20" [@changeHeader]=currentStateHeader>
-	<div class="join">Join</div>
+<div class="titleSection" detect-scroll (onScroll)="handleScroll($event)" [bottomOffset]="200" [topOffset]="200" [@changeHeader]=currentStateHeader>
+
 	<svg  id="logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
 		<defs>
 			<style>
@@ -21,7 +21,14 @@
 		<span class="business"> Business </span>
 		<span class="Associations"> Associaitons</span>
 	</h1>
-	<div class="contact">Contact</div>
+	<div class="contact">
+		<img src='../../assets/bubble.svg'/>
+		<h5>Contact</h5>
+	</div>
+		<div class="join">
+		<img src="../../assets/join.svg"/>
+			<span class="joinText">Join</span>
+		</div>
 </div>
  
 
