@@ -5,6 +5,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDialogModule } from '@angular/material/dialog';
+
+import 'hammerjs';
 
 import { FormsModule } from '@angular/forms';
 
@@ -17,13 +20,15 @@ import { FooterComponent } from './footer/footer.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { GoalsComponent } from './goals/goals.component';
+import { ExampleCaseStudyComponent } from './example-case-study/example-case-study.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopComponent,
     FooterComponent,
-    GoalsComponent
+    GoalsComponent,
+    ExampleCaseStudyComponent
   ],
   imports: [
     BrowserModule,
@@ -33,11 +38,13 @@ import { GoalsComponent } from './goals/goals.component';
     MatCheckboxModule,
     MatSidenavModule,
     MatTooltipModule,
+    MatDialogModule,
     ScrollEventModule,
     FormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }) 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ExampleCaseStudyComponent]
 })
 export class AppModule { }

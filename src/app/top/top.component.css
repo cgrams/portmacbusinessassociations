@@ -1,7 +1,8 @@
 svg#logo {
     max-width: 100px;
     grid-column-start: 2;
-    height: 70px;   
+    height: 70px;
+
 }
 h1 span {
     padding: 0 5px;
@@ -17,7 +18,7 @@ h1 {
     display: flex;
     align-items: center;
     grid-column-start: 3;
-    font-size: 25px; 
+    justify-content: center;
 }
 
 .contact, .join {

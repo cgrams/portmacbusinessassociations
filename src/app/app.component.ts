@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { MatDialog,  MatDialogConfig} from '@angular/material';
+
 
 @Component({
   selector: 'app-root',
@@ -36,17 +38,22 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 
 })
 export class AppComponent {
-  title = 'portmacbusinessassociations';
+	title = 'portmacbusinessassociations';
 
-  events: string[] = [];
-  opened: boolean;
+	events: string[] = [];
+	opened: boolean;
 
+	currentState = 'initial';
+	changeState() { this.currentState = this.currentState === 'initial' ? 'final' : 'initial'; }
 
-currentState = 'initial';
+	constructor(public dialog: MatDialog) {}
 
-changeState() {
-  this.currentState = this.currentState === 'initial' ? 'final' : 'initial';
-}
-
+	/*openDialog() {
+	        const dialogConfig = new MatDialogConfig();
+	        dialogConfig.disableClose = true;
+	        dialogConfig.autoFocus = true;
+	        this.dialog.open(ExampleCaseStudyComponent, dialogConfig);
+	    }
+	*/
 
 }

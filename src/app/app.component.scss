@@ -26,6 +26,13 @@ section.levelUpContent {
     grid-column-start: 2;
     grid-row-start: 6;
 }
+.underPicTop {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
 .handShakeButton {
     grid-column-start: 4;
     grid-column-end: 8;
@@ -232,7 +239,7 @@ h3 {
     grid-column-end: 4;
     display: grid;
     grid-template-columns: 33% 33% 34%;
-    grid-template-rows: repeat(10, 100px);
+    grid-template-rows: repeat(7, 100px);
 }
 
 
