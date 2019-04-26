@@ -17,17 +17,15 @@
 
       <div class="mainBackground"></div>
  
-
- 
-
  
     	<app-top></app-top>
       <section class="levelUpContent">
+
         <img class="seeThrough" src="../assets/moreThan.svg" width="100%">
         <h3>Free business networking community in Port Macquarie</h3>
         <div class="imagesHeroes">
           <div class="newSectionFlyIn" [@changeDivSize]=currentState>
-            <app-goals></app-goals>  
+            <app-goals (click)="changeState()"></app-goals>  
           </div>          
           <div class="oneTopOrange">
             <h4 class="orangeTitle">
@@ -69,9 +67,6 @@
             </svg>            
           </div>
         </div>
-
-
-
 
       </section>
 
