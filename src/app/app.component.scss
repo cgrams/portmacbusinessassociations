@@ -242,9 +242,16 @@ h3 {
     grid-template-rows: repeat(7, 100px);
 }
 
-
-
-
+.fourGreeny path.ng-tns-c0-0 {
+    fill: white;
+}
+.fourGreeny svg {
+    position: relative;
+    left: 10%;
+    -ms-transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
+    transform: rotate(180deg);
+}
 
 
 @keyframes fadeIn {

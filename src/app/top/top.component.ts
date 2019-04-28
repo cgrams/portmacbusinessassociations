@@ -51,9 +51,8 @@ export class TopComponent implements OnInit {
 	changeStateHeader() { this.currentStateHeader = this.currentStateHeader === 'initialHeader' ? 'finalHeader' : 'initialHeader'; }
 	
 
-	public handleScroll(event: ScrollEvent) { 
+	public handleScroll(event: ScrollEvent) {
 		event.isReachingTop ? ( this.currentStateHeader = 'initialHeader' ) : (this.currentStateHeader = 'finalHeader'); 
-		 
 	}
 
 
