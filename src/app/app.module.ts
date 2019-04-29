@@ -13,6 +13,10 @@ import { FormsModule } from '@angular/forms';
 
 import { ScrollEventModule } from 'ngx-scroll-event';
 
+import { environemnt } from '../environments/environment';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopComponent } from './top/top.component';
@@ -41,6 +45,7 @@ import { ExampleCaseStudyComponent } from './example-case-study/example-case-stu
     MatDialogModule,
     ScrollEventModule,
     FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }) 
   ],
   providers: [],
