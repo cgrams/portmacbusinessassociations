@@ -252,7 +252,21 @@ h3 {
     -webkit-transform: rotate(20deg);
     transform: rotate(180deg);
 }
-
+.showUsWhatYouGot {
+    background: white;
+    width: 100%;
+    grid-row-start: 8;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: 1px solid black;
+    height: 200px;
+}
+section.explainedRaisonDetre {
+    background: white;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+}
 
 @keyframes fadeIn {
   from {
