@@ -38,13 +38,36 @@ import { MatDialog,  MatDialogConfig} from '@angular/material';
 
 })
 export class AppComponent {
+
+showStyle = false;
+  getBackgroundColor() {
+    if (this.showStyle) {
+      return 'red';
+    } else {
+      return '';
+    }
+
+    console.log(444);
+  }
+
+
+
+
+
 	title = 'portmacbusinessassociations';
 
 	events: string[] = [];
 	opened: boolean;
 
 	currentState = 'initial';
+
+	stateOfFill: string = "pink";
 	changeState() { this.currentState = this.currentState === 'initial' ? 'final' : 'initial'; }
+	
+	changeRedArrow(){
+		this.stateOfFill="red";
+		console.log(this.stateOfFill);
+	}
 
 	constructor(public dialog: MatDialog) {}
 

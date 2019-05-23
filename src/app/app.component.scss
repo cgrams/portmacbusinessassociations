@@ -104,7 +104,7 @@ span.smallArrowMiddle svg {
     margin: 0 auto;
     background-color: white;    
 }
-.organgeAboutButton{
+.organgeAboutButton, .rightBackwardsArrow{
     border:none;
     background-color: #f0f8ff00;
     padding: 0;
@@ -113,6 +113,18 @@ span.smallArrowMiddle svg {
 
 }
 
+.fourGreeny {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 7%;
+    color: white;
+    font-size: 20px;
+}
+span.listofSkills {
+    font-size: 18px;
+}
 button#curser2 {
     cursor: pointer;
 }
@@ -122,14 +134,17 @@ button#curser2 {
     cursor: pointer;
     transition: 0.3s;
 }
-.organgeAboutButton svg:hover{
+.organgeAboutButton svg:hover, .rightBackwardsArrow svg:hover {
     fill:red;
 }
 
+
+ 
 .organgeAboutButton:focus {
     outline: none ;
  
 }
+
 
 .oneTopOrange {
     background: #ff9966;  /* fallback for old browsers */
@@ -267,6 +282,7 @@ section.explainedRaisonDetre {
     grid-column-end: 4;
     grid-row-start: 4;
 }
+
 
 @keyframes fadeIn {
   from {

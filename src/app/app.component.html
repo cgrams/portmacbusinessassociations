@@ -60,12 +60,22 @@
             <div class="whiteTop"></div>
             <div class="greyTop"></div>
             <div class="fourGreeny">
-              <h4>Currently we can share strong skills in Web Technology and the Education sector</h4>
-              <svg id="rightBackwardsArrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <h4>Currently we can share strong skills in: <br/> 
+                <span class="listofSkills">&#9734; Web Technology</span> <br /> <span class="listofSkills">&#9734; Education sector</span>
+              </h4>
+              
+              <button (mouseenter)="showStyle = !showStyle" (mouseleave)="showStyle = !showStyle" class="rightBackwardsArrow" matTooltip="More about group skills" matTooltipClass="goalsTooltip" matTooltipPosition="below">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="purple">
 
-                <path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/>
-              </svg>
-           
+                  <path [style.fill]="getBackgroundColor()" d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z" />
+                </svg>
+              </button>
+
+
+ 
+
+
+
             </div>
           </div>
           <div class="smallGreenArrow"></div>
