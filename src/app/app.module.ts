@@ -31,6 +31,7 @@ import { GoalsComponent } from './goals/goals.component';
 import { ExampleCaseStudyComponent } from './example-case-study/example-case-study.component';
 import { JoinComponent } from './join/join.component';
 import { RaisonComponent } from './raison/raison.component';
+import { SkllsComponent } from './sklls/sklls.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { RaisonComponent } from './raison/raison.component';
     GoalsComponent,
     ExampleCaseStudyComponent,
     JoinComponent,
-    RaisonComponent
+    RaisonComponent,
+    SkllsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -55,7 +57,7 @@ import { RaisonComponent } from './raison/raison.component';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-        BrowserModule.withServerTransition({ appId: 'portmacbusinessassociations' }), // <-- here
+    BrowserModule.withServerTransition({ appId: 'portmacbusinessassociations' }), // <-- here
     BrowserTransferStateModule
   ],
   providers: [],

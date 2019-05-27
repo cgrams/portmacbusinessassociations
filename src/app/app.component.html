@@ -4,6 +4,8 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
+
+
     <div class="hamburger">
     	<button mat-button (click)="sidenav.toggle()">
 			<svg class="ham ham2" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
@@ -16,18 +18,19 @@
 
 
       <div class="mainBackground"></div>
- 
- 
-    	<app-top></app-top>
+
+    	<app-top (messageEvent)="receiveMessage($event)"></app-top>
+
+
       <section class="levelUpContent">
 
         <img class="seeThrough" src="../assets/moreThan.svg" width="100%">
-        <h3>Free business networking community in Port Macquarie</h3>
+        <h3 id="aboutScroll">Free business networking community in Port Macquarie</h3>
         <div class="imagesHeroes">
           <div class="newSectionFlyIn" [@changeDivSize]=currentState>
             <app-goals (click)="changeState()"></app-goals>  
           </div>          
-          <div class="oneTopOrange">
+          <div class="oneTopOrange" >
             <h4 class="orangeTitle">
               FOCUS ON <br/>
               SPECIFIC AND TANGIBLE  <br/>
@@ -48,7 +51,7 @@
             <div class="underOrangeLeftWhite"></div>
           </div>
           <div class="twoTopLightBlue">
-            <div class="handShakeButton">CASE STUDY</div>
+            <div class="handShakeButton" (click)="openCaseStudy()">CASE STUDY</div>
             <span class="smallArrowMiddle">
               <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 25"><defs>
                 <style>.cls-Green{fill:#143738;stroke:#143738;stroke-miterlimit:10;}</style>
@@ -60,6 +63,9 @@
             <div class="whiteTop"></div>
             <div class="greyTop"></div>
             <div class="fourGreeny">
+              <div class="flyInFromRightSection">
+                
+              </div>
               <h4>Currently we can share strong skills in: <br/> 
                 <span class="listofSkills">&#9734; Web Technology</span> <br /> <span class="listofSkills">&#9734; Education sector</span>
               </h4>
@@ -88,11 +94,11 @@
         </div>
 
         <section class='explainedRaisonDetre'>
-<app-raison></app-raison>
+          <app-raison></app-raison>
         </section> 
         
 
-      <app-join></app-join>
+        <app-join id="joinScroll"></app-join>
       </section>
 
 

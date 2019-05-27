@@ -8,3 +8,13 @@ section.goalsSection {
 h3{
 	color: white;	
 }
+
+.close {
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}

@@ -1,8 +1,10 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, EventEmitter, Input, Output } from '@angular/core';
 
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 import { ScrollEvent } from 'ngx-scroll-event';
+
+import { NgAnimateScrollService } from 'ng-animate-scroll';
 
 @Component({
   selector: 'app-top',
@@ -39,6 +41,8 @@ import { ScrollEvent } from 'ngx-scroll-event';
 })
 export class TopComponent implements OnInit {
 
+ 
+
 	mainTitle = [
 		{title: 'Port Mac'},
 		{title: 'Business'}, 
@@ -64,9 +68,22 @@ onWindowScroll() {
  		this.currentStateTitle = 'initialTitle';
  	}
 
+
 }
 
-  constructor() { }
+  constructor(private animateScrollService: NgAnimateScrollService) { }
+
+	message: string = "cool caleb"
+	@Output() messageEvent = new EventEmitter<string>();
+
+  navigateToJoin(duration?:number) {
+     this.animateScrollService.scrollToElement('joinScroll', 500)
+
+    }
+  navigateToInfo(duration?:number) {
+     this.animateScrollService.scrollToElement('aboutScroll', 500)
+     this.messageEvent.emit(this.message)
+    }
 
   ngOnInit() { }
 

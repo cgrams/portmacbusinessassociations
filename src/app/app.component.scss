@@ -123,7 +123,7 @@ span.smallArrowMiddle svg {
     font-size: 20px;
 }
 span.listofSkills {
-    font-size: 18px;
+    font-size: 17px;
 }
 button#curser2 {
     cursor: pointer;
@@ -136,8 +136,9 @@ button#curser2 {
 }
 .organgeAboutButton svg:hover, .rightBackwardsArrow svg:hover {
     fill:red;
-}
 
+}
+button:focus {outline:0;}
 
  
 .organgeAboutButton:focus {
@@ -241,7 +242,7 @@ h3 {
     background: white;
     padding: 0;
     margin: 0;
-    padding: 0 0 120px 0;
+    padding: 0 0 50px 0;
 }
 .smallGreenArrow {
     background: white;

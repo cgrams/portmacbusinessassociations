@@ -1,4 +1,3 @@
-
 <div class="titleSection" detect-scroll (onScroll)="handleScroll($event)" [bottomOffset]="200" [topOffset]="200" [@changeHeader]=currentStateHeader>
 
 	<svg  id="logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
@@ -22,10 +21,19 @@
 	<div class="contact">
  
 	</div>
-		<div class="join">
-			<img src="../../assets/join.svg"/>
-			<span class="joinText">Join</span>
-		</div>
+		<ul class="navList">
+			<li class="infoIcon" (click)="navigateToInfo();">
+				<img width="25" src="../../assets/information.svg"/>
+				<span class="joinText">About</span>
+			</li>			
+			<li class="join" (click)="navigateToJoin();">
+				<img  src="../../assets/join.svg"/>
+				<span class="joinText">Join</span>
+			</li>
+		</ul>
+
+
+
 </div>
  
 

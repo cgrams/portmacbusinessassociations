@@ -2,6 +2,7 @@ import { Component, Inject } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { MatDialog,  MatDialogConfig} from '@angular/material';
 
+import { ExampleCaseStudyComponent } from './example-case-study/example-case-study.component';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ import { MatDialog,  MatDialogConfig} from '@angular/material';
 		    gridRowEnd: '7',
 		    gridColumnStart: '2',
 		    gridColumnEnd: '4',
-		    right: '2000px'
+		    right: '2000px',
+		    opacity: '0'
 	    })),
 	    state('final', style({
 		    zIndex: '5',
@@ -28,9 +30,10 @@ import { MatDialog,  MatDialogConfig} from '@angular/material';
 		    gridRowEnd: '7',
 		    gridColumnStart: '2',
 		    gridColumnEnd: '4',
-		    right: '0px'
+		    right: '0px',
+		    opacity: '1'
 	    })),
-	    transition('initial=>final', animate('500ms')),
+	    transition('initial=>final', animate('1500ms')),
 	    transition('final=>initial', animate('500ms'))
 	  ]),
   ]
@@ -46,8 +49,6 @@ showStyle = false;
     } else {
       return '';
     }
-
-    console.log(444);
   }
 
 
@@ -64,19 +65,16 @@ showStyle = false;
 	stateOfFill: string = "pink";
 	changeState() { this.currentState = this.currentState === 'initial' ? 'final' : 'initial'; }
 	
-	changeRedArrow(){
-		this.stateOfFill="red";
-		console.log(this.stateOfFill);
-	}
+ 
 
 	constructor(public dialog: MatDialog) {}
 
-	/*openDialog() {
-	        const dialogConfig = new MatDialogConfig();
-	        dialogConfig.disableClose = true;
-	        dialogConfig.autoFocus = true;
-	        this.dialog.open(ExampleCaseStudyComponent, dialogConfig);
-	    }
-	*/
+
+
+	receiveMessage($event){ this.currentState = this.currentState === 'initial' ? 'final' : 'final';}
+
+	openCaseStudy(){
+		this.dialog.open(ExampleCaseStudyComponent);
+	}
 
 }

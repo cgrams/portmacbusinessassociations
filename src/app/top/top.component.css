@@ -25,12 +25,25 @@ h1 {
     display: flex;
     align-items: center;
 }
-.join img, .joinText, .contact img{
+.join img, .joinText, .contact img, .infoIcon{
 	cursor: pointer;
 }
-
+li.infoIcon {
+    display: flex;
+    align-items: center;
+}
 .contact h5 {
     padding-bottom: 2%;
     padding-left: 1%;
     cursor: pointer;
+}
+li.infoIcon img {
+    padding-right: 2px;
+}
+ul.navList {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    list-style: none;
 }
