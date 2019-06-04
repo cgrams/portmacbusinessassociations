@@ -1,0 +1,49 @@
+svg#logo {
+    max-width: 100px;
+    grid-column-start: 2;
+    height: 70px;
+
+}
+h1 span {
+    padding: 0 5px;
+}
+.titleSection {
+    display: grid;
+    grid-template-columns: 27% 8% 40% 10% 10% 5%;
+    background: white;
+    padding: 5px 0;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    grid-column-start: 3;
+    justify-content: center;
+}
+
+.contact, .join {
+    display: flex;
+    align-items: center;
+}
+.join img, .joinText, .contact img, .infoIcon{
+	cursor: pointer;
+}
+li.infoIcon {
+    display: flex;
+    align-items: center;
+}
+.contact h5 {
+    padding-bottom: 2%;
+    padding-left: 1%;
+    cursor: pointer;
+}
+li.infoIcon img {
+    padding-right: 2px;
+}
+ul.navList {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    list-style: none;
+}

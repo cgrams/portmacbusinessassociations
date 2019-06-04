@@ -1,0 +1,42 @@
+<!--detect-scroll (onScroll)="handleScroll($event)" [bottomOffset]="200" [topOffset]="200" [@changeHeader]=currentStateHeader-->
+
+<div class="titleSection">
+
+	<svg  id="logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+		<defs>
+			<style>
+				.topLogo{fill:#f15736;}
+				.cls-1,.cls-2,.cls-4,.cls-5{stroke:#f15736;stroke-miterlimit:10;}
+				.cls-2,.cls-3{fill:#fff;}
+				.cls-2{stroke-width:0.73px;}
+				.cls-4,.cls-5{fill:none;}
+				.cls-4{stroke-width:0.91px;}
+				.cls-5{stroke-width:0.91px;}
+			</style>
+		</defs>
+		<title>logo</title>
+		<rect class="topLogo" x="0.5" y="0.5" width="100%" height="100%"/><rect class="cls-2" x="64.5" y="285.5" width="85.33" height="173"/><polygon class="cls-3" points="272.17 398.06 186.83 458.5 186.83 189.17 272.17 189.17 272.17 398.06"/><polygon class="cls-4" points="272.17 398.06 186.83 458.5 186.83 189.17 272.17 189.17 272.17 398.06"/><polygon class="cls-3" points="395.12 322.38 309.79 383.12 309.79 112.5 395.12 112.5 395.12 322.38"/><polygon class="cls-5" points="395.12 322.38 309.79 383.12 309.79 112.5 395.12 112.5 395.12 322.38"/>
+	</svg>
+	<h1 [@title]=currentStateTitle >
+		<span *ngFor="let hero of mainTitle; let i = index" class="title" id="title{{i}}">{{hero.title}}</span>
+	</h1>
+	<div class="contact">
+ 
+	</div>
+		<ul class="navList">
+			<li class="infoIcon" (click)="navigateToInfo();">
+				<img width="25" src="../../assets/information.svg"/>
+				<span class="joinText">About</span>
+			</li>			
+			<li class="join" (click)="navigateToJoin();">
+				<img  src="../../assets/join.svg"/>
+				<span class="joinText">Join</span>
+			</li>
+		</ul>
+
+
+
+</div>
+ 
+
+ 
